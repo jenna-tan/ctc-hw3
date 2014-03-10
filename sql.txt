@@ -3,46 +3,68 @@ Homework 3 - Code the Change
 
 Question #1:
 ============
-
+CREATE TABLE students
+( 
+id int, 
+name varchar(255), 
+birthday varchar(255),
+gpa decimal(2,1), 
+graddate int,
+PRIMARY KEY (id)
+) 
 
 
 Question #2:
 ============
-
+INSERT INTO students (name, birthday, gpa, graddate)
+VALUES ('Anderson','1987-10-22',3.9,2014);
+INSERT INTO students (name, birthday, gpa, graddate)
+VALUES ('Jones','1990-4-16',2.4,2016);
+INSERT INTO students (nname, birthday, gpa, graddate)
+VALUES ('Hernandez','1989-8-12',3.1,2015);
+INSERT INTO students (name, birthday, gpa, graddate)
+VALUES ('Chen','1990-2-4',3.2,2015);
 
 
 Question #3:
 ============
-
+DELETE FROM students
+WHERE name='Anderson';
 
 
 Question #4:
 ============
-
+SELECT * FROM students;
 
 
 Question #5:
 ============
-
+SELECT name, gpa FROM students;
 
 
 Question #6:
 ============
-
+SELECT name, gpa 
+FROM students
+WHERE gpa > 3.0;
 
 
 Question #7:
 ============
-
+SELECT name,gpa FROM students
+WHERE gpa>3.0
+ORDER BY gpa DESC;
 
 
 Question #8:
 ============
-
+UPDATE students 
+SET gpa=2.6 
+WHERE Name=‘Jones’;
 
 
 Question #9:
 ============
-
+DROP TABLE students;
 
 
